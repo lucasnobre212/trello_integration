@@ -45,3 +45,4 @@
     Add validators when communicating with trello, to make sure we are sending and retrieving the correct information.
      this also avoid errors when sending data to GoodDay.
     Take a look at FastApi framework, it looks like it is better to create APIs with Python
+
