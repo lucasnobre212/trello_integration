@@ -72,7 +72,7 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-# Editor-based Rest Client
+# Editor-based Rest User
 .idea/httpRequests
 
 # Android studio 3.1+ serialized cache file
@@ -251,3 +251,5 @@ cython_debug/
 # End of https://www.toptal.com/developers/gitignore/api/pycharm,python
 
 .idea
+migrations
+data.sqlite

@@ -1,12 +1,15 @@
 import os
+from pathlib import Path
 
-BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+
+BASE_DIR = Path(__file__).parent
 
 
 class Config:
     TRELLO_API_KEY = os.getenv('TRELLO_API_KEY')
     TRELLO_TOKEN = os.getenv('TRELLO_TOKEN')
-
+    SQLALCHEMY_DATABASE_URI = 'sqlite:////' + os.path.join(BASE_DIR, 'data.sqlite')
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
     @staticmethod
     def init_app(app):
         pass
@@ -14,6 +17,7 @@ class Config:
 
 class DevelopmentConfig(Config):
     DEBUG = True
+    OAUTH_DEVELOPMENT_URI = 'http://470cb6e4be93.ngrok.io/api/v1/oauth/redirect'
 
 
 class TestingConfig(Config):
