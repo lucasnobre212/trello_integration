@@ -29,7 +29,7 @@ def import_trello_task(user_id):
 def import_multiple_projects(user_id):
     data = request.json
     token = User.query.filter_by(user_id=user_id).first().token
-    trello_projects_ids = data['trelloProjectsId']
+    trello_projects_ids = data['trelloProjectIds']
     if not isinstance(trello_projects_ids, list):
         return jsonify({
             'status': 'error',
