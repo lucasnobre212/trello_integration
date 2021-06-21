@@ -2,7 +2,7 @@ from flask import jsonify
 
 from . import api
 from .. import db
-from ..main.trello import is_token_valid, oauth_authorize_url
+from app.api.trello import is_token_valid, oauth_authorize_url
 from ..models import User
 
 
