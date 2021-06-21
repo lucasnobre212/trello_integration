@@ -9,7 +9,7 @@
         user_id: int
 
      Example:
-     https://470cb6e4be93.ngrok.io/api/v1/oauth/authorize/1
+     http://08fedf9cea1d.ngrok.io/api/v1/oauth/authorize/1
 
 ## POST /import/tasks/<user_id>
     Get cards from given board id (trelloProjectId)
@@ -21,7 +21,7 @@
         user_id: int
 
     Example:
-        https://470cb6e4be93.ngrok.io/api/v1/import/tasks/1
+        http://08fedf9cea1d.ngrok.io/api/v1/import/tasks/1
 
 ## POST /import/projects/<user_id>
     Get boards from given boards ids (trelloProjectIds) and then get their cards
@@ -33,7 +33,7 @@
         user_id: int
 
     Example:
-        https://470cb6e4be93.ngrok.io/api/v1/oauth/authorize/1
+        http://08fedf9cea1d.ngrok.io/api/v1/oauth/authorize/1
 
 
 # Things I would change in the long run
