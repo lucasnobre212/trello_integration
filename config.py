@@ -17,7 +17,8 @@ class Config:
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    OAUTH_DEVELOPMENT_URI = 'http://470cb6e4be93.ngrok.io/api/v1/oauth/redirect'
+    NGROK_PATH = os.getenv('NGROK_PATH')
+    OAUTH_DEVELOPMENT_URI = f'{NGROK_PATH}/api/v1/oauth/redirect'
 
 
 class TestingConfig(Config):

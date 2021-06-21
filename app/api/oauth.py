@@ -31,6 +31,10 @@ def redirect_oauth_token(user_id):
 @api.route('/oauth/token/<token>/<int:user_id>')
 def get_trello_oauth_token(token, user_id):
     new_token = User(user_id=user_id, token=token)
+    old_user = User.query.filter_by(user_id=user_id)
+    if old_user:
+        old_user.delete()
+    db.session.commit()
     db.session.add(new_token)
     db.session.commit()
     return jsonify({
