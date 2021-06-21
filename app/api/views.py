@@ -14,8 +14,6 @@ def import_trello_task(user_id):
     good_day_project_id = get_good_day_project_id()
     tasks = get_board_cards(project_id, token)
     if tasks:
-        # TODO: Send tasks to good day
-        # TODO: Retrieve the id of the task
         return jsonify({
             'Status': 'OK',
             'goodday': receive_tasks(tasks, good_day_project_id)
